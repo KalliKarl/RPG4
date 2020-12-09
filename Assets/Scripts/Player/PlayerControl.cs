@@ -91,6 +91,11 @@ public class PlayerControl : MonoBehaviour {
         //move nearest gameobject and interact
         if (enemy.Count > 0 && enemy[indx] != null) {
             motor.MoveToPoint(enemy[indx].transform.position);
+            float maxHp = enemy[indx].GetComponent<EnemyStats>().maxHealth;
+            float curHp = enemy[indx].GetComponent<EnemyStats>().currentHealth;
+            StaticMethods.FindInActiveObjectByName("MobHpTop").GetComponent<Image>().fillAmount = curHp / maxHp;
+            StaticMethods.FindInActiveObjectByName("MobMHp").GetComponent<Text>().text = maxHp.ToString();
+            StaticMethods.FindInActiveObjectByName("MobCHp").GetComponent<Text>().text = curHp.ToString() + " / ";
             hitPrefab.transform.position = enemy[indx].transform.position;
             hitPrefab.transform.position += new Vector3(0f, 0.05f, 0f);
             Interactable interactable = enemy[indx].gameObject.GetComponentInParent<Interactable>();
@@ -204,10 +209,11 @@ public class PlayerControl : MonoBehaviour {
                 StaticMethods.FindInActiveObjectByName("MobHealthUi").SetActive(true);
                 StaticMethods.FindInActiveObjectByName("MobMHp").SetActive(true);
                 StaticMethods.FindInActiveObjectByName("MobCHp").SetActive(true);
-                GameObject.Find("MobName").GetComponent<Text>().text = newFocus.GetComponent<EnemyStats>().mobName;
-                GameObject.Find("MobLvl").GetComponent<Text>().text = newFocus.GetComponent<EnemyStats>().Level.ToString();
-                GameObject.Find("MobMHp").GetComponent<Text>().text = " /" + newFocus.GetComponent<EnemyStats>().maxHealth.ToString();
-                GameObject.Find("MobCHp").GetComponent<Text>().text = newFocus.GetComponent<EnemyStats>().currentHealth.ToString();
+                StaticMethods.FindInActiveObjectByName("MobName").GetComponent<Text>().text = newFocus.GetComponent<EnemyStats>().mobName;
+                StaticMethods.FindInActiveObjectByName("MobLvl").GetComponent<Text>().text = newFocus.GetComponent<EnemyStats>().Level.ToString();
+                StaticMethods.FindInActiveObjectByName("MobMHp").GetComponent<Text>().text = " /" + newFocus.GetComponent<EnemyStats>().maxHealth.ToString();
+                StaticMethods.FindInActiveObjectByName("MobCHp").GetComponent<Text>().text = newFocus.GetComponent<EnemyStats>().currentHealth.ToString();
+                StaticMethods.FindInActiveObjectByName("MobHealthUi").GetComponent<Image>().fillAmount = 1;
             }
             if(foc == "NPCNPCN") {
                 StaticMethods.FindInActiveObjectByName("MobUI").SetActive(true); ;

@@ -80,8 +80,9 @@ public class CharacterCombat : MonoBehaviour{
         if (healthSlider != null && player.GetComponent<PlayerControl>().focus != null) {
             Interactable enemy =    player.GetComponent<PlayerControl>().focus;
             float healthPercent =(float) enemy.GetComponent<EnemyStats>().currentHealth / (float)enemy.GetComponent<EnemyStats>().maxHealth;
-            GameObject.Find("MobCHp").GetComponent<Text>().text = enemy.GetComponent<EnemyStats>().currentHealth.ToString();
-            GameObject.Find("MobMHp").GetComponent<Text>().text = " /" + enemy.GetComponent<EnemyStats>().maxHealth.ToString();
+            StaticMethods.FindInActiveObjectByName("MobCHp").GetComponent<Text>().text = enemy.GetComponent<EnemyStats>().currentHealth.ToString();
+            StaticMethods.FindInActiveObjectByName("MobMHp").GetComponent<Text>().text = " /" + enemy.GetComponent<EnemyStats>().maxHealth.ToString();
+            Debug.Log(healthPercent);
             healthSlider.fillAmount = healthPercent;
         }
         FindObjectOfType<AudioManager>().Play("hit"+rand);
