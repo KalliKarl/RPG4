@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8317892718139427280
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8317892718139427286}
+  - component: {fileID: 8317892718139427287}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8317892718139427286
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8317892718139427280}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.388855, y: 2, z: 0.8303833}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8317892718139427287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8317892718139427280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc1159bb7433d1745837d198c797aa30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: hit0
+    clip: {fileID: 8300000, guid: 7c34f518119801d48ad9d802356926ad, type: 3}
+    volume: 0.95
+    pitch: 1.39
+    source: {fileID: 0}
+  - name: hit1
+    clip: {fileID: 8300000, guid: 946b013b44c36714999667e3d164fce4, type: 3}
+    volume: 0.95
+    pitch: 1.39
+    source: {fileID: 0}
+  - name: hit2
+    clip: {fileID: 8300000, guid: a9d738c1aca81c34f837a647bca388ed, type: 3}
+    volume: 0.95
+    pitch: 1.39
+    source: {fileID: 0}
+  - name: hit3
+    clip: {fileID: 8300000, guid: 98a7a881cd91a1942aec5e044d49f6d6, type: 3}
+    volume: 0.95
+    pitch: 1.39
+    source: {fileID: 0}
+  - name: hit4
+    clip: {fileID: 8300000, guid: 749b032067b6ced41a07c429d53046ac, type: 3}
+    volume: 0.95
+    pitch: 1.39
+    source: {fileID: 0}
+  - name: dead1
+    clip: {fileID: 8300000, guid: 77f16848bf9aa4d4eb99c921e667b0b9, type: 3}
+    volume: 0.95
+    pitch: 1.39
+    source: {fileID: 0}
+  - name: dead2
+    clip: {fileID: 8300000, guid: 423e5df6ab2e22e418f963551d684763, type: 3}
+    volume: 0.95
+    pitch: 1.39
+    source: {fileID: 0}
+  - name: dead3
+    clip: {fileID: 8300000, guid: e5fb61f8b4537ef45a05cba300c6e1a3, type: 3}
+    volume: 0.95
+    pitch: 1.39
+    source: {fileID: 0}
+  - name: dead4
+    clip: {fileID: 8300000, guid: d3df535cfcc8c3845ba4c5cb2c557d5f, type: 3}
+    volume: 0.95
+    pitch: 1.39
+    source: {fileID: 0}
+  - name: dead5
+    clip: {fileID: 8300000, guid: 2f51409ec74d5c1468b8b8d2138e84a3, type: 3}
+    volume: 0.95
+    pitch: 1.39
+    source: {fileID: 0}
