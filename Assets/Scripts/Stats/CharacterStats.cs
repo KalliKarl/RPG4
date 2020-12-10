@@ -48,7 +48,7 @@ public class CharacterStats : MonoBehaviour {
         damage -= armor.GetValue();
         damage = Mathf.Clamp(damage, 1, int.MaxValue);
 
-
+        Debug.Log(damage + "Get Damaged" + this.gameObject.name);
         currentHealth -= damage;        //Debug.Log(transform.name + "Takes " + damage + "Damage");
 
         if (this.gameObject.name == "Player") {
@@ -79,6 +79,7 @@ public class CharacterStats : MonoBehaviour {
 
 
         if (currentHealth <= 0 && isDead == false) {
+            currentHealth = 0;
             Die();
         }
         
